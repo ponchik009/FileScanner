@@ -8,6 +8,7 @@ namespace FileScanner
 {
     internal static class Program
     {
+        /// kaka
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
