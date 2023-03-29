@@ -32,6 +32,17 @@ namespace FileScanner
             this.button1.Enabled = false;
 
             string path = this.textBox1.Text;
+            if (path == "")
+            {
+                MessageBox.Show(
+                    "Вы не ввели путь",
+                    "Ошибка",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                this.button1.Enabled = true;
+                return;
+            }
+
             string pattern = this.textBox2.Text;
 
             var progress = new Progress<string>(i => this.label2.Text = "Прогресс: " + i.ToString());
